@@ -3,8 +3,6 @@
     padding: 0;
     box-sizing: border-box;
     border: none;
-    scroll-snap-type: proximity;
-    scroll-snap-points-y: repeat();
     scroll-snap-type: y proximity;
 }
 
@@ -14,7 +12,7 @@
     --font-secondary: 'Outfit', sans-serif;
 }
 
-@media (prefers-color-scheme: dark){
+/* @media (prefers-color-scheme: dark){
     :root {
         --color-primary: #24272C;
         --bright: #131920;
@@ -33,7 +31,7 @@
         color: var(--font--color-secondary);
         border: 2px solid var(--color-primary);
     }
-}
+} */
 
 @media (prefers-color-scheme: light){
     :root {
@@ -89,18 +87,43 @@ a, a:link, a:visited {
         padding-top: 3.5vw;
     }
 
+    .blur-bg{
+        position: absolute;
+        display: none;
+        right: 0;
+        bottom: 0;
+        -webkit-clip-path: polygon(30% 30%, 100% 6%, 100% 100%, 0 100%);
+    }
+
+    .blur-bg2{
+        position: absolute;
+        display: none;
+        left: 0;
+        bottom: 0;
+        -webkit-clip-path: polygon(0 6%, 70% 30%, 100% 100%, 0 100%);
+    }
+
+    .blur-bg img, .blur-bg2 img{
+        width: calc(calc(100vw / 18) * 9);
+        height: calc(calc(100vw / 18) * 9);
+        object-fit: cover;
+        object-position: 0 0;
+        opacity: 0.5;
+    }
+
     .section{
         width: 100vw;
-        height: fit-content;
+        height: calc(calc(100vw / 18) * 9);
         margin: auto;
         text-align: center;
         position: relative;
+        background-color: var(--bright);
         scroll-snap-align: start;
     }
 
     .section2{
         width: 100vw;
-        height: fit-content;
+        height: calc(calc(100vw / 18) * 9);
         margin: auto;
         text-align: center;
         position: relative;
@@ -168,7 +191,7 @@ a, a:link, a:visited {
         -moz-transform: scale(105%);
         -ms-transform: scale(105%);
         -o-transform: scale(105%);
-}
+    }
 
     .game a{
         width: inherit;
