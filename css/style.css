@@ -4,8 +4,6 @@
     box-sizing: border-box;
     border: none;
     scroll-behavior: smooth;
-    scroll-snap-type: y proximity;
-    scroll-snap-type: proximity;
 }
 
 :root {
@@ -71,7 +69,6 @@ a, a:link, a:visited {
 @media only screen and (max-width: 479px){
     .wrapper > div{
         padding-top: calc(100vw / 6);
-        scroll-snap-align: start;
     }
 }
 
@@ -80,7 +77,6 @@ a, a:link, a:visited {
     .wrapper > div{
         padding-top: 8vw;
         scroll-snap-align: start;
-        scroll-snap-stop: always;
     }
 
     .wrapper > div:last-child{
