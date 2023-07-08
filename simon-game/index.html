@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Simon Game</title>
+		<script src="/js/tw.js"></script>
+	</head>
+	<body class="w-full h-full bg-slate-50 p-4">
+		<h1 id="title"
+			class=" text-2xl sm:text-5xl text-slate-50 sm:w-10/12 rounded-2xl mx-auto font-bold text-center p-6 bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90%">
+			Press A Key To Start
+		</h1>
+        <div class="container grid grid-cols-2 grid-rows-2 gap-6 w-max mx-auto sm:mx-auto my-16 sm:my-32">
+            <div id="click1" class="clickable sm:w-48 sm:h-48 bg-red-500 w-32 h-32 rounded-3xl shadow-2xl shadow-red-500"></div>
+            <div id="click2" class="clickable sm:w-48 sm:h-48 bg-blue-500 w-32 h-32 rounded-3xl shadow-2xl shadow-blue-500"></div>
+            <div id="click3" class="clickable sm:w-48 sm:h-48 bg-green-500 w-32 h-32 rounded-3xl shadow-2xl shadow-green-500"></div>
+            <div id="click4" class="clickable sm:w-48 sm:h-48 bg-yellow-500 w-32 h-32 rounded-3xl shadow-2xl shadow-yellow-500"></div>
+        </div>
+		<button class="sm:hidden px-4 py-2 rounded-xl mx-auto text-2xl text-slate-50 w-full bg-blue-500">Start</button>
+		<script src="/js/jq.js"></script>
+		<script src="./index.js"></script>
+	</body>
+</html>
